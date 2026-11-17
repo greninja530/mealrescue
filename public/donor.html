@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MealRescue | Donor Dashboard</title>
+    <link rel="stylesheet" href="/public/css/style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar-inner">
+        <div class="brand"><div class="brand-mark">M</div><span>MealRescue</span></div>
+        <div class="nav-links">
+          <span id="user-pill" class="small"></span>
+          <button id="logout-btn" class="button danger">Logout</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <section class="section">
+        <div class="card-grid" id="stats-grid"></div>
+      </section>
+
+      <section class="section grid-two">
+        <div class="panel">
+          <h2>Publish a donation</h2>
+          <form id="donation-form" class="form-grid" enctype="multipart/form-data">
+            <div class="form-two-col">
+              <div>
+                <label>Food name</label>
+                <input name="foodName" required />
+              </div>
+              <div>
+                <label>Category</label>
+                <select name="category">
+                  <option>Meals</option>
+                  <option>Bakery</option>
+                  <option>Vegetarian</option>
+                  <option>Snacks</option>
+                  <option>Fruits</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <label>Description</label>
+              <textarea name="description" rows="3"></textarea>
+            </div>
+            <div class="form-two-col">
+              <div>
+                <label>Total quantity</label>
+                <input name="totalQuantity" type="number" min="1" required />
+              </div>
+              <div>
+                <label>Preparation time</label>
+                <input name="preparationTime" type="text" />
+              </div>
+            </div>
+            <div class="form-two-col">
+              <div>
+                <label>Storage info</label>
+                <input name="storageInfo" type="text" />
+              </div>
+              <div>
+                <label>Collection deadline</label>
+                <input name="collectionDeadline" type="datetime-local" required />
+              </div>
+            </div>
+            <div>
+              <label>Pickup location</label>
+              <input name="pickupLocation" required />
+            </div>
+            <div>
+              <label>Food image</label>
+              <input name="image" type="file" accept="image/*" />
+            </div>
+            <button type="submit" class="button">Publish donation</button>
+          </form>
+        </div>
+
+        <div class="list-card">
+          <h2>Notifications</h2>
+          <div id="notifications" class="notification-list"></div>
+        </div>
+      </section>
+
+      <section class="section grid-two">
+        <div class="table-card">
+          <h2>My donations</h2>
+          <div id="donation-list"></div>
+        </div>
+        <div class="table-card">
+          <h2>Reservation requests</h2>
+          <div id="reservation-list"></div>
+        </div>
+      </section>
+    </div>
+
+    <script src="/public/js/app.js"></script>
+  </body>
+</html>

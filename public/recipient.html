@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MealRescue | Recipient Dashboard</title>
+    <link rel="stylesheet" href="/public/css/style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar-inner">
+        <div class="brand"><div class="brand-mark">M</div><span>MealRescue</span></div>
+        <div class="nav-links">
+          <span id="user-pill" class="small"></span>
+          <button id="logout-btn" class="button danger">Logout</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <section class="section">
+        <div class="card-grid" id="stats-grid"></div>
+      </section>
+
+      <section class="section grid-two">
+        <div class="table-card">
+          <h2>Recommended donations</h2>
+          <div id="donation-list"></div>
+        </div>
+        <div class="list-card">
+          <h2>Notifications</h2>
+          <div id="notifications" class="notification-list"></div>
+        </div>
+      </section>
+
+      <section class="section grid-two">
+        <div class="table-card">
+          <h2>My reservation requests</h2>
+          <div id="reservation-list"></div>
+        </div>
+      </section>
+    </div>
+
+    <script src="/public/js/app.js"></script>
+  </body>
+</html>

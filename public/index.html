@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MealRescue | Surplus Food Redistribution</title>
+    <link rel="stylesheet" href="/public/css/style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar-inner">
+        <div class="brand">
+          <div class="brand-mark">M</div>
+          <span>MealRescue</span>
+        </div>
+        <div class="nav-links">
+          <button class="button secondary" onclick="window.location.href='#auth'">Get started</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="hero">
+      <div class="container">
+        <div class="hero-panel">
+          <div>
+            <h1>Rescue surplus food before it goes to waste.</h1>
+            <p>
+              MealRescue connects food donors, recipient organizations, volunteers, and admins in a single platform for efficient, transparent, and timely redistribution.
+            </p>
+            <div class="hero-badges">
+              <span>Donation tracking</span>
+              <span>Volunteer coordination</span>
+              <span>Smart matching</span>
+              <span>Impact reporting</span>
+            </div>
+          </div>
+
+          <div class="auth-card" id="auth">
+            <div class="tabs">
+              <button class="tab-btn active" data-target="login-panel">Login</button>
+              <button class="tab-btn" data-target="register-panel">Register</button>
+            </div>
+
+            <div id="login-panel" class="auth-panel">
+              <h3>Welcome back</h3>
+              <form id="login-form" class="form-grid">
+                <div>
+                  <label for="login-email">Email</label>
+                  <input id="login-email" name="email" type="email" placeholder="name@example.com" required />
+                </div>
+                <div>
+                  <label for="login-password">Password</label>
+                  <input id="login-password" name="password" type="password" placeholder="••••••••" required />
+                </div>
+                <button type="submit" class="button">Login</button>
+              </form>
+            </div>
+
+            <div id="register-panel" class="auth-panel hidden">
+              <h3>Create account</h3>
+              <form id="register-form" class="form-grid">
+                <div class="form-two-col">
+                  <div>
+                    <label for="register-name">Full name</label>
+                    <input id="register-name" name="name" type="text" required />
+                  </div>
+                  <div>
+                    <label for="register-role">Role</label>
+                    <select id="register-role" name="role">
+                      <option value="donor">Food Donor</option>
+                      <option value="recipient">Recipient Organization</option>
+                      <option value="volunteer">Volunteer</option>
+                    </select>
+                  </div>
+                </div>
+                <div>
+                  <label for="register-email">Email</label>
+                  <input id="register-email" name="email" type="email" required />
+                </div>
+                <div>
+                  <label for="register-password">Password</label>
+                  <input id="register-password" name="password" type="password" required />
+                </div>
+                <div class="form-two-col">
+                  <div>
+                    <label for="register-organization">Organization</label>
+                    <input id="register-organization" name="organizationName" type="text" />
+                  </div>
+                  <div>
+                    <label for="register-location">Location</label>
+                    <input id="register-location" name="location" type="text" />
+                  </div>
+                </div>
+                <div>
+                  <label for="register-phone">Phone</label>
+                  <input id="register-phone" name="phone" type="tel" />
+                </div>
+                <button type="submit" class="button">Register</button>
+              </form>
+            </div>
+            <p id="auth-message" class="small mt-2"></p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="/public/js/app.js"></script>
+  </body>
+</html>

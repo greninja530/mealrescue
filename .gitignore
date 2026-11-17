@@ -1,0 +1,11 @@
+node_modules/
+data/*.db
+data/*.db-*
+cookies*.txt
+uploads/*
+!uploads/sample-food.jpg
+!uploads/sample-food.svg
+.env
+.env.*
+!.env.example
+npm-debug.log*
